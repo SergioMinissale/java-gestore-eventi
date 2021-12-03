@@ -74,8 +74,8 @@ public class Main {
 				evento.disdici();
 			}
 			System.out.println("Hai disdetto " + disdette + " prenotazioni.");
-			System.out.println("Al momento ci sono: " + (evento.getPostiPrenotati() - disdette) + " posti prenotati e "
-					+ ((evento.getPostiTotale() - evento.getPostiPrenotati()) + disdette) + " posti ancora disponibili");
+			System.out.println("Al momento ci sono: " + (evento.getPostiPrenotati() ) + " posti prenotati e "
+					+ (((evento.getPostiTotale() - evento.getPostiPrenotati()))) + " posti ancora disponibili");
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
