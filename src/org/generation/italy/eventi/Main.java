@@ -18,7 +18,7 @@ public class Main {
 		System.out.print("Inserisci il titolo dell'evento:");
 		titolo = scanner.nextLine();
 
-		System.out.print("Inserisci il numero di posti disponibili per questo evento: ");
+		System.out.print("Inserisci il numero di posti disponibili per questo evento: "); 
 		postiTotale = scanner.nextInt();
 
 		System.out.print("Inserisci il giorno dell'evento: ");
@@ -52,8 +52,8 @@ public class Main {
 			for (int i = 0; i < prenotazioni; i++) {
 				evento.prenota();
 			}
-			System.out.println("In totale ci sono: " + (postiTotale - prenotazioni)
-					+ " posti disponibili" + " e " + prenotazioni + " posti già prenotati.");
+			System.out.println("In totale ci sono: " + prenotazioni + " posti prenotati" + " e "
+					+ (postiTotale - prenotazioni) + " posti ancora disponibii.");
 
 			stop = false;
 			System.out.print("Disdire qualche prenotazione? (s/n)");
@@ -74,9 +74,8 @@ public class Main {
 				evento.disdici();
 			}
 			System.out.println("Hai disdetto " + disdette + " prenotazioni.");
-			System.out.println("Al momento ci sono: " + prenotazioni + " posti prenotati e "
-					+ (postiTotale - prenotazioni) + " posti ancora disponibili");
-
+			System.out.println("Al momento ci sono: " + (prenotazioni - disdette) + " posti prenotati e "
+					+ ((postiTotale - prenotazioni) + disdette) + " posti ancora disponibili");
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
